@@ -13,13 +13,21 @@ function addWorkout(event) {
     let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     workouts.push(workout);
     localStorage.setItem('workouts', JSON.stringify(workouts));
-    
+
     displayWorkouts();
 }
 
 function displayWorkouts() {
     const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     const workoutList = document.getElementById('workout-list');
-    workoutList.innerHTML = workouts.map(workout => `<li>${workout.date} ${workout.exercise} ${workout.weight} ${workout.reps} ${workout.sets}</li>`).join('');
+    workoutList.innerHTML = workouts.map(workout => `
+        <tr>
+        <td>${workout.date}</td>
+        <td>${workout.exercise}</td>
+        <td>${workout.weight}</td>
+        <td>${workout.reps}</td>
+        <td>${workout.sets}</td>
+        </tr>`).join('');
 }
 displayWorkouts();
+
