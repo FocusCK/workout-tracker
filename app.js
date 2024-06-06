@@ -12,7 +12,8 @@ function addWorkout(event) {
 
     let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     workouts.push(workout);
-    localStorage.setItem('cardio', JSON.stringify(workout));
+    localStorage.setItem('workouts', JSON.stringify(workouts));
+    
     displayWorkouts();
 }
 
