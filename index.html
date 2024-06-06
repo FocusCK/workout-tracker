@@ -10,18 +10,20 @@
 <body>
     <div>
         <h1>Workout Tracker</h1>
-        <form>
+        <form id="form">
             <label for="date">Date</label>
             <input id="date" type="date">
             <label for="exercise">Exercise</label>
             <input id="exercise" type="text">
             <label for="duration">Duration</label>
             <input id="duration" type="number">
+            <button type="submit">Add Workout to list</button>
         </form>
     </div>
     <div class="workouts">
         <p>Logged Workouts</p>
-        <!-- Past workouts will go here using JavaScript -->
+        <ul id="workout-list">
+        </ul>
     </div>
 
     <div class="goals">
