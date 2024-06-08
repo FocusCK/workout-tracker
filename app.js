@@ -37,7 +37,11 @@ function addWorkoutToTable(workout) {
     const workoutList = document.getElementById('workout-list');
     const row = document.createElement('tr');
 
-    row.innerHTML = `<td>${workout.date}</td> <td>${workout.exercise}</td> <td>${workout.weight}</td> <td>${workout.reps}</td> <td>${workout.sets}</td>`;
+    row.innerHTML = `<td>${workout.date}</td>
+    <td>${workout.exercise}</td>
+    <td>${workout.weight}</td>
+    <td>${workout.reps}</td>
+    <td>${workout.sets}</td>`;
     if (workoutList.firstChild) {
         workoutList.insertBefore(row, workoutList.firstChild);
     } else {
@@ -48,9 +52,22 @@ function displayWorkouts() {
     const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     const workoutList = document.getElementById('workout-list');
     workoutList.innerHTML = '';
-    
+
     workouts.forEach(workout => {
         addWorkoutToTable(workout);
     });
 }
 displayWorkouts();
+
+document.getElementById('set-goal').addEventListener('click', setGoal);
+
+function setGoal() {
+    const goal = document.getElementById('goal').value;
+    localStorage.setItem('goal', goal);
+    displayGoal();
+}
+
+function displayGoal() {
+    const goal = localStorage.getItem('goal') || 'None';
+    document.getElementById('current-goal').innerText = goal;
+}
