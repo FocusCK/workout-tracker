@@ -16,7 +16,6 @@ function addWorkout(event) {
 
     // displayWorkouts();
     addWorkoutToTable(workout);
-    document.getElementById('workout-form').requestFullscreen();
 }
 
 // function displayWorkouts() {
