@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+    displayWorkouts();
+    displayGoal();
+    displayPersonalList();
+});
+
 document.getElementById('workout-form').addEventListener('submit', addWorkout);
 
 function addWorkout(event) {
@@ -13,24 +19,9 @@ function addWorkout(event) {
     let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     workouts.push(workout);
     localStorage.setItem('workouts', JSON.stringify(workouts));
-
-    // displayWorkouts();
     addWorkoutToTable(workout);
 }
 
-// function displayWorkouts() {
-//     const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
-//     const workoutList = document.getElementById('workout-list');
-//     workoutList.innerHTML = workouts.map(workout => `
-//         <tr>
-//         <td>${workout.date}</td>
-//         <td>${workout.exercise}</td>
-//         <td>${workout.weight}</td>
-//         <td>${workout.reps}</td>
-//         <td>${workout.sets}</td>
-//         </tr>`).join('');
-// }
-// displayWorkouts();
 
 
 function addWorkoutToTable(workout) {
@@ -57,7 +48,7 @@ function displayWorkouts() {
         addWorkoutToTable(workout);
     });
 }
-displayWorkouts();
+
 
 document.getElementById('set-goal').addEventListener('click', setGoal);
 
@@ -70,4 +61,24 @@ function setGoal() {
 function displayGoal() {
     const goal = localStorage.getItem('goal') || 'None';
     document.getElementById('current-goal').innerText = goal;
+}
+
+
+
+document.getElementById('exercise-form').addEventListener('submit', addToPersonalList);
+
+function addToPersonalList(event) {
+    event.preventDefault();
+    const newExercise = document.getElementById('new-exercise').value;
+    let exerciseList = JSON.parse(localStorage.getItem('exercises')) || [];
+    exerciseList.push(newExercise);
+    localStorage.setItem('exercises', JSON.stringify(exerciseList));
+    displayPersonalList();
+    document.getElementById('new-exercise').value = '';
+}
+
+function displayPersonalList() {
+    const exerciseList = JSON.parse(localStorage.getItem('exercises')) || [];
+    const chooseExercise = document.getElementById('exercise');
+    chooseExercise.innerHTML = exerciseList.map(exercise => `<option value="${exercise}">${exercise}</option>`).join('');
 }
