@@ -1,5 +1,5 @@
 body {
-    background-image: url(gym-background.jpg);
+    background-image: url(/images/gym-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -25,3 +25,4 @@ div {
     padding: 10px 30px;
 }
 
+/* Display the divs in columns depending on screen size */
