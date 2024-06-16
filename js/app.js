@@ -20,6 +20,7 @@ function addWorkout(event) {
     workouts.push(workout);
     localStorage.setItem('workouts', JSON.stringify(workouts));
     addWorkoutToTable(workout);
+    displayWorkouts();
 }
 
 
@@ -82,18 +83,29 @@ function displayPersonalList() {
     const chooseExercise = document.getElementById('exercise');
     // chooseExercise.innerHTML = exerciseList.map(exercise => `<option value="${exercise}">${exercise}</option>`).join('');
     chooseExercise.innerHTML = '';
-    exerciseList.forEach((exercise, index) => {
+    exerciseList.forEach((exercise) => {
         const option = document.createElement('option');
         option.value = exercise;
         option.textContent = exercise;
+        chooseExercise.appendChild(option);
+    });
+
+    const exerciseListContainer = document.getElementById('exercise-list-container');
+    exerciseListContainer.innerHTML = '';
+
+    exerciseList.forEach((exercise, index) => {
+        const exerciseItem = document.createElement('div');
+        exerciseItem.classList.add('exercise-item');
+        const exerciseText = document.createElement('span');
+        exerciseText.textContent = exercise;
+
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.style.marginLeft = '10px';
         deleteButton.addEventListener('click', () => deleteExercise(index));
-        const optionWrapper = document.createElement('div');
-        optionWrapper.appendChild(option);
-        optionWrapper.appendChild(deleteButton);
-        chooseExercise.appendChild(optionWrapper);
+        exerciseItem.appendChild(exerciseText);
+        exerciseItem.appendChild(deleteButton);
+        exerciseListContainer.appendChild(exerciseItem);
     });
 }
 

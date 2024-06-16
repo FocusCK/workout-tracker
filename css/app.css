@@ -25,4 +25,26 @@ div {
     padding: 10px 30px;
 }
 
-/* Display the divs in columns depending on screen size */
+.exercise-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.exercise-item span {
+    flex: 1;
+}
+
+.exercise-item button {
+    background-color: rgb(39, 237, 237);
+    color: rgb(211, 43, 43);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.exercise-item button:hover {
+    background-color: cornsilk;
+}
+
