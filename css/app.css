@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: rgba(12, 12, 12, 0.723);
 }
 form, .workouts, .goals, .exercises {
     margin: 20px 0;
@@ -20,7 +21,7 @@ form, .workouts, .goals, .exercises {
 }
 
 div {
-    background: rgba(255, 252, 252, 0.615);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     padding: 10px 30px;
 }
@@ -36,8 +37,8 @@ div {
 }
 
 .exercise-item button {
-    background-color: rgb(39, 237, 237);
-    color: rgb(211, 43, 43);
+    background-color: rgb(155, 57, 34, 0.5);
+    color: rgb(72, 30, 20);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -45,6 +46,7 @@ div {
 }
 
 .exercise-item button:hover {
-    background-color: cornsilk;
+    background-color: rgb(242, 97, 63);
 }
 
+/* MAKE THE DIVS GO INTO COLUMNS WHEN THE DISPLAY IS BEIGGER THAN A PHONE TO AVOID EMPTY SPACE */

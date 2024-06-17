@@ -81,7 +81,6 @@ function addToPersonalList(event) {
 function displayPersonalList() {
     const exerciseList = JSON.parse(localStorage.getItem('exercises')) || [];
     const chooseExercise = document.getElementById('exercise');
-    // chooseExercise.innerHTML = exerciseList.map(exercise => `<option value="${exercise}">${exercise}</option>`).join('');
     chooseExercise.innerHTML = '';
     exerciseList.forEach((exercise) => {
         const option = document.createElement('option');
