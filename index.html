@@ -13,7 +13,15 @@
     <div>
         <h1>Workout Tracker</h1>
     </div>
-<br>
+
+<div class="goals">
+    <h2>Current Goal: <div id="current-goal">None</div>
+        <label for="goal">Set Goal:</label>
+        <br>
+    <input type="text" id="goal" placeholder="Type here to update your current goal!">
+    <button id="set-goal">Set Goal</button>
+    </h2>
+</div>
     <div>
         <form id="workout-form">
             <label for="date">Date</label>
@@ -37,18 +45,6 @@
             <button type="submit">Add Workout to list</button>
         </form>
     </div>
-
-    <div class="exercises">
-        <h2>Exercise List</h2>
-        <h3>Use this list to add exercises you wish to track</h3>
-        <form id="exercise-form">
-            <label for="new-exercise">Exercise Name:</label>
-            <input type="text" id="new-exercise">
-            <button type="submit">Add Exercise</button>
-        </form>
-        <div id="exercise-list-container"></div>
-    </div>
-
     <div class="workouts">
         <h2>Logged Exercises</h2>
         <table>
@@ -62,15 +58,19 @@
             <tbody id="workout-list"></tbody>
         </table>
     </div>
-
-    <div class="goals">
-        <h2>Set Single Rep Goal</h2>
-        <label for="goal">Next Goal/Milestone</label>
-        <input type="text" id="goal">
-        <button id="set-goal">Set Goal</button>
-        <h2>Current Goal: <div id="current-goal">None</div>
-        </h2>
+    <div class="exercises">
+        <h3>Use this list to add exercises you wish to track</h3>
+        <form id="exercise-form">
+            <label for="new-exercise">Exercise Name:</label>
+            <input type="text" id="new-exercise">
+            <button type="submit">Add Exercise</button>
+        </form>
+        <div id="exercise-list-container"></div>
     </div>
+
+    
+
+
 </main>
 <footer>
 

@@ -12,9 +12,9 @@ body {
     align-items: center;
     color: rgba(12, 12, 12, 0.723);
 }
+
 form, .workouts, .goals, .exercises {
     margin: 20px 0;
-    /* padding: 10px; */
     width: 300px;
     display: flex;
     flex-direction: column;
