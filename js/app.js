@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('workout-form').addEventListener('submit', addWorkout);
+document.getElementById('show-all-button').addEventListener('click', showMoreWorkouts);
 
 function addWorkout(event) {
     event.preventDefault();
@@ -19,7 +20,7 @@ function addWorkout(event) {
     let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     workouts.push(workout);
     localStorage.setItem('workouts', JSON.stringify(workouts));
-    addWorkoutToTable(workout);
+    // addWorkoutToTable(workout);
     displayWorkouts();
 }
 
@@ -45,11 +46,32 @@ function displayWorkouts() {
     const workoutList = document.getElementById('workout-list');
     workoutList.innerHTML = '';
 
-    workouts.forEach(workout => {
+    const showMoreButton = document.getElementById('show-all-button');
+    if(workouts.length > 3) {
+        showMoreButton.style.display = 'block';
+    } else {
+        showMoreButton.style.display = 'none';
+    }
+
+    const latestWorkouts = workouts.slice(-3).reverse();
+    latestWorkouts.forEach(workout => {
         addWorkoutToTable(workout);
     });
+
+    // workouts.forEach(workout => {
+    //     addWorkoutToTable(workout);
+    // });
 }
 
+function showMoreWorkouts(){
+    const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+    const workoutList = document.getElementById('workout-list');
+    workoutList.innerHTML = '';
+    workouts.reverse().forEach(workout => {
+        addWorkoutToTable(workout);
+    });
+    document.getElementById('show-all-button').style.display = 'none';
+}
 
 document.getElementById('set-goal').addEventListener('click', setGoal);
 

@@ -10,71 +10,72 @@
 
 <body>
     <main>
-    <div>
-        <h1>Workout Tracker</h1>
-    </div>
+        <div>
+            <h1>Workout Tracker</h1>
+        </div>
 
-<div class="goals">
-    <h2>Current Goal: <div id="current-goal">None</div>
-        <label for="goal">Set Goal:</label>
-        <br>
-    <input type="text" id="goal" placeholder="Type here to update your current goal!">
-    <button id="set-goal">Set Goal</button>
-    </h2>
-</div>
-    <div>
-        <form id="workout-form">
-            <label for="date">Date</label>
-            <input id="date" type="date" required>
-            <br>
-            <label for="exercise">Exercise</label>
-            <select id="exercise" required></select>
-            <br>
-            <label for="weight">Weight in KG</label>
-            <input id="weight" type="number" required>
-            <!-- Negative numbers not allowed -->
-            <br>
-            <label for="reps">Reps</label>
-            <input id="reps" type="number" required>
-            <!-- Negative numbers not allowed -->
-            <br>
-            <label for="sets">Sets</label>
-            <input id="sets" type="number" required>
-            <!-- Negative numbers not allowed VALIDATION!!-->
-            <br>
-            <button type="submit">Add Workout to list</button>
-        </form>
-    </div>
-    <div class="workouts">
-        <h2>Logged Exercises</h2>
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Exercise</th>
-                <th>Weight</th>
-                <th>Reps</th>
-                <th>Sets</th>
-            </tr>
-            <tbody id="workout-list"></tbody>
-        </table>
-    </div>
-    <div class="exercises">
-        <h3>Use this list to add exercises you wish to track</h3>
-        <form id="exercise-form">
-            <label for="new-exercise">Exercise Name:</label>
-            <input type="text" id="new-exercise">
-            <button type="submit">Add Exercise</button>
-        </form>
-        <div id="exercise-list-container"></div>
-    </div>
+        <div class="goals">
+            <h2>Current Goal: <div id="current-goal">None</div>
+                <label for="goal">Set Goal:</label>
+                <br>
+                <input type="text" id="goal" placeholder="Type here to update your current goal!">
+                <button id="set-goal">Set Goal</button>
+            </h2>
+        </div>
+        <div>
+            <form id="workout-form">
+                <label for="date">Date</label>
+                <input id="date" type="date" required>
+                <br>
+                <label for="exercise">Exercise</label>
+                <select id="exercise" required></select>
+                <br>
+                <label for="weight">Weight in KG</label>
+                <input id="weight" type="number" required>
+                <!-- Negative numbers not allowed -->
+                <br>
+                <label for="reps">Reps</label>
+                <input id="reps" type="number" required>
+                <!-- Negative numbers not allowed -->
+                <br>
+                <label for="sets">Sets</label>
+                <input id="sets" type="number" required>
+                <!-- Negative numbers not allowed VALIDATION!!-->
+                <br>
+                <button type="submit">Add Workout to list</button>
+            </form>
+        </div>
+        <div class="workouts">
+            <h2>Logged Exercises</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Exercise</th>
+                    <th>Weight</th>
+                    <th>Reps</th>
+                    <th>Sets</th>
+                </tr>
+                <tbody id="workout-list"></tbody>
+            </table>
+            <button id="show-all-button">Show all</button>
+        </div>
+        <div class="exercises">
+            <h3>Use this list to add exercises you wish to track</h3>
+            <form id="exercise-form">
+                <label for="new-exercise">Exercise Name:</label>
+                <input type="text" id="new-exercise">
+                <button type="submit">Add Exercise</button>
+            </form>
+            <div id="exercise-list-container"></div>
+        </div>
 
-    
 
 
-</main>
-<footer>
 
-</footer>
+    </main>
+    <footer>
+
+    </footer>
     <script src="/js/app.js"></script>
 </body>
 

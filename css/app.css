@@ -15,7 +15,7 @@ body {
 
 form, .workouts, .goals, .exercises {
     margin: 20px 0;
-    width: 300px;
+    width: 290px;
     display: flex;
     flex-direction: column;
 }
@@ -48,5 +48,24 @@ div {
 .exercise-item button:hover {
     background-color: rgb(242, 97, 63);
 }
+
+#show-more-button{
+    display: none;
+}
+
+/* 
+@media (min-width: 580px){
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    form, .workouts, .goals, .exercises {
+        margin: 20px 0;
+        width: 45%;
+    }
+} */
+
+
 
 /* MAKE THE DIVS GO INTO COLUMNS WHEN THE DISPLAY IS BEIGGER THAN A PHONE TO AVOID EMPTY SPACE */
