@@ -12,8 +12,21 @@ function addWorkout(event) {
     const date = document.getElementById('date').value;
     const exercise = document.getElementById('exercise').value;
     const weight = document.getElementById('weight').value;
+    if(weight <= 0) {
+        alert('Please enter a valid weight.'); 
+        return;
+    }
     const reps = document.getElementById('reps').value;
+    if(reps <= 0) {
+        alert('Please enter a valid number of reps.');
+        return;
+    }
     const sets = document.getElementById('sets').value;
+    if(sets <= 0) {
+        alert('Please enter a valid number of sets')
+    }
+
+    
 
     const workout = { date, exercise, weight, reps, sets };
 
