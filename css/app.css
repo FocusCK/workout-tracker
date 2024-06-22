@@ -16,8 +16,7 @@ body {
 
 
 form, .workouts, .goals, .exercises, .workout-form {
-    margin: 20px 0;
-    width: 20em;
+    /* width: 20em; */
     display: flex;
     flex-direction: column;
 }
@@ -27,6 +26,12 @@ div {
     border-radius: 12px;
     padding: 10px 30px;
     margin: 20px 0;
+}
+
+.workouts, .goals, .exercises, .workout-form {
+    margin: 1em;
+    width: 18em;
+    justify-content: space-around;
 }
 
 .exercise-item {
@@ -75,7 +80,11 @@ img {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+    .workouts, .goals, .exercises, .workout-form {
+        margin: 1em;
+        width: 25em;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 900px){
