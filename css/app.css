@@ -106,9 +106,8 @@ img {
 }
 @media (min-width: 1200px) {
     img {
-        width: 70vw;
+        width: 60vw;
         margin: 0 10vw;
     }
 
 }
-/* MAKE THE DIVS GO INTO COLUMNS WHEN THE DISPLAY IS BEIGGER THAN A PHONE TO AVOID EMPTY SPACE */
