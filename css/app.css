@@ -15,7 +15,11 @@ body {
 
 
 
-form, .workouts, .goals, .exercises, .workout-form {
+form,
+.workouts,
+.goals,
+.exercises,
+.workout-form {
     /* width: 20em; */
     display: flex;
     flex-direction: column;
@@ -28,7 +32,10 @@ div {
     margin: 20px 0;
 }
 
-.workouts, .goals, .exercises, .workout-form {
+.workouts,
+.goals,
+.exercises,
+.workout-form {
     margin: 1em;
     width: 18em;
     justify-content: space-around;
@@ -57,7 +64,7 @@ div {
     background-color: rgb(242, 97, 63);
 }
 
-#show-more-button{
+#show-more-button {
     display: none;
 }
 
@@ -66,7 +73,7 @@ img {
     border-radius: 20px;
 }
 
-@media (max-width: 580px){
+@media (max-width: 580px) {
     main {
         display: flex;
         flex-direction: column;
@@ -74,20 +81,24 @@ img {
     }
 }
 
-@media (min-width: 580px){
+@media (min-width: 580px) {
     main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .workouts, .goals, .exercises, .workout-form {
+
+    .workouts,
+    .goals,
+    .exercises,
+    .workout-form {
         margin: 1em;
         width: 25em;
         justify-content: space-around;
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
     img {
         width: 80vw;
     }

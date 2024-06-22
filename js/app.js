@@ -12,21 +12,21 @@ function addWorkout(event) {
     const date = document.getElementById('date').value;
     const exercise = document.getElementById('exercise').value;
     const weight = document.getElementById('weight').value;
-    if(weight <= 0) {
-        alert('Please enter a valid weight.'); 
+    if (weight <= 0) {
+        alert('Please enter a valid weight.');
         return;
     }
     const reps = document.getElementById('reps').value;
-    if(reps <= 0) {
+    if (reps <= 0) {
         alert('Please enter a valid number of reps.');
         return;
     }
     const sets = document.getElementById('sets').value;
-    if(sets <= 0) {
+    if (sets <= 0) {
         alert('Please enter a valid number of sets')
     }
 
-    
+
 
     const workout = { date, exercise, weight, reps, sets };
 
@@ -60,7 +60,7 @@ function displayWorkouts() {
     workoutList.innerHTML = '';
 
     const showMoreButton = document.getElementById('show-all-button');
-    if(workouts.length > 3) {
+    if (workouts.length > 3) {
         showMoreButton.style.display = 'block';
     } else {
         showMoreButton.style.display = 'none';
@@ -76,7 +76,7 @@ function displayWorkouts() {
     // });
 }
 
-function showMoreWorkouts(){
+function showMoreWorkouts() {
     const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
     const workoutList = document.getElementById('workout-list');
     workoutList.innerHTML = '';
