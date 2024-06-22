@@ -13,9 +13,11 @@ body {
     color: rgba(12, 12, 12, 0.723);
 }
 
-form, .workouts, .goals, .exercises {
+
+
+form, .workouts, .goals, .exercises, .workout-form {
     margin: 20px 0;
-    width: 290px;
+    width: 20em;
     display: flex;
     flex-direction: column;
 }
@@ -24,6 +26,7 @@ div {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     padding: 10px 30px;
+    margin: 20px 0;
 }
 
 .exercise-item {
@@ -53,19 +56,33 @@ div {
     display: none;
 }
 
-/* 
+img {
+    width: 90vw;
+    border-radius: 20px;
+}
+
+@media (max-width: 580px){
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (min-width: 580px){
     main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    form, .workouts, .goals, .exercises {
-        margin: 20px 0;
-        width: 45%;
+    
+}
+
+@media (min-width: 900px){
+    img {
+        width: 80vw;
     }
-} */
 
-
+}
 
 /* MAKE THE DIVS GO INTO COLUMNS WHEN THE DISPLAY IS BEIGGER THAN A PHONE TO AVOID EMPTY SPACE */
